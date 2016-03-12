@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sifanrpf.activity.MainActivity" >
+
+    
+    
+    <TextView
+        android:id="@+id/inforstudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:text="GradeSeeker ©" />
+    
+    <TextView
+        android:id="@+id/sifanApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="Sifan Apps ©" />
+    
+    <Button
+        android:id="@+id/botao_adicionar_semestre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/botao_lista_semestres"
+        android:layout_marginBottom="56dp"
+        android:text="Adicionar novo Semestre"
+        android:background="@drawable/button"/>    
+
+    <Button
+        android:id="@+id/botao_lista_semestres"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/botao_adicionar_semestre"
+        android:layout_centerVertical="true"
+        android:text="Semestres" 
+        android:background="@drawable/button"/>
+    
+    <Button
+        android:id="@+id/botao_lista_disciplinas"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/botao_lista_semestres"
+        android:layout_marginTop="56dp"
+        android:text="Disciplinas"
+        android:radius="50dp" 
+        android:type="radial"
+        android:background="@drawable/button"/>
+
+</RelativeLayout>

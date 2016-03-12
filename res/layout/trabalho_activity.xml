@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sifanrpf.activity.TrabalhoActivity" >
+    
+    <TextView
+        android:id="@+id/inforstudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="12dp"
+        android:text="GradeSeeker ©" />
+    
+    <TextView
+        android:id="@+id/sifanApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="10dp"
+        android:text="Sifan Apps ©" />
+    
+    <TextView
+        android:id="@+id/nomeDisciplina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+    
+    <TextView
+        android:id="@+id/tituloNumeroTrabalhos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomeDisciplina"
+        android:layout_below="@+id/nomeDisciplina"
+        android:layout_marginTop="5dp"
+        android:text="Número de Trabalhos/ Projectos/ Relatórios" />
+
+    <Spinner
+        android:id="@+id/spinnerNumeroTrabalhos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tituloNumeroTrabalhos"
+        android:layout_below="@+id/tituloNumeroTrabalhos" />
+    
+    <TextView
+        android:id="@+id/tituloPercentagemTrabalhos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomeDisciplina"
+        android:layout_below="@+id/spinnerNumeroTrabalhos"
+        android:layout_marginTop="5dp"
+        android:text="Quanto valem os Trabalhos/ Relatórios/ Projectos? (%)" />
+    
+    <TextView
+        android:id="@+id/percentagensTrabalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomeDisciplina"
+        android:layout_below="@+id/percentagemTrabalho"
+        android:layout_marginTop="5dp"
+        android:text="Edite as percentagens de cada trabalho na lista abaixo (se não alterar, todos valem o mesmo)" />
+
+    <EditText
+        android:id="@+id/percentagemTrabalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tituloPercentagemTrabalhos"
+        android:layout_below="@+id/tituloPercentagemTrabalhos"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/gravarTrabalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Gravar" 
+        android:background="@drawable/button"/>
+
+    <ListView
+        android:id="@+id/listPercentagemCadaTrabalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/percentagemTrabalho"
+        android:layout_above="@+id/ajuda"
+        android:layout_below="@+id/percentagensTrabalho"
+        android:layout_centerVertical="true" 
+        android:layout_marginTop="10dp"
+    	android:layout_marginBottom="1dp">
+    </ListView>
+    
+    <TextView
+        android:id="@+id/ajuda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listPercentagemCadaTrabalho"
+        android:layout_above="@+id/gravarTrabalho"
+        android:layout_marginBottom="5dp"
+        android:textSize="8dp"
+        android:text="DICA: Se colocaste 2 avaliações (exemplo), cada uma tem um valor pré-definido de 50%. Se no teu caso a primeira vale 55% e a segunda 45%, clica na lista acima para alterar as percentagens" />
+</RelativeLayout>

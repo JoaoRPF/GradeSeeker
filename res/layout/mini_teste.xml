@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sifanrpf.activity.MiniTesteActivity" >
+    
+    <TextView
+        android:id="@+id/inforstudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="12dp"
+        android:text="GradeSeeker ©" />
+    
+    <TextView
+        android:id="@+id/sifanApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="10dp"
+        android:text="Sifan Apps ©" />
+    
+    <TextView
+        android:id="@+id/nomeDisciplina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+    
+    <TextView
+        android:id="@+id/tituloNumeroMiniTestes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomeDisciplina"
+        android:layout_below="@+id/nomeDisciplina"
+        android:layout_marginTop="5dp"
+        android:text="Número de Mini Testes" />
+
+    <Spinner
+        android:id="@+id/spinnerNumeroMiniTestes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tituloNumeroMiniTestes"
+        android:layout_below="@+id/tituloNumeroMiniTestes" />
+    
+    <TextView
+        android:id="@+id/tituloPercentagemMiniTestes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomeDisciplina"
+        android:layout_below="@+id/spinnerNumeroMiniTestes"
+        android:layout_marginTop="5dp"
+        android:text="Quanto valem os Mini Testes? (%)" />
+    
+    <TextView
+        android:id="@+id/percentagensMiniTestes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomeDisciplina"
+        android:layout_below="@+id/percentagemMiniTeste"
+        android:layout_marginTop="5dp"
+        android:text="Edite as percentagens de cada teste na lista abaixo (se não alterar, todos valem o mesmo)" />
+
+    <EditText
+        android:id="@+id/percentagemMiniTeste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tituloPercentagemMiniTestes"
+        android:layout_below="@+id/tituloPercentagemMiniTestes"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/gravarMiniTeste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Gravar" 
+        android:background="@drawable/button"/>
+
+    <ListView
+        android:id="@+id/listPercentagemCadaTeste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/percentagemMiniTeste"
+        android:layout_above="@+id/ajuda"
+        android:layout_below="@+id/percentagensMiniTestes"
+        android:layout_centerVertical="true" 
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="1dp">
+    </ListView>
+    
+    <TextView
+        android:id="@+id/ajuda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listPercentagemCadaTeste"
+        android:layout_above="@+id/gravarMiniTeste"
+        android:layout_marginBottom="5dp"
+        android:textSize="8dp"
+        android:text="DICA: Se colocaste 2 avaliações (exemplo), cada uma tem um valor pré-definido de 50%." />
+    
+</RelativeLayout>
